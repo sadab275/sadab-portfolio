@@ -9,19 +9,30 @@ const Portfolio = () => {
         {
             id: 1,
             src: rafsankitchen,
-            live: "https://rafsan-kitchen.web.app/"
+            live: "https://rafsan-kitchen.web.app/",
+            client: "https://github.com/sadab275/Rafsan-Kitchen-client-side",
+            server: "https://github.com/sadab275/Rafsan-Kitchen-server-side"
         },
         {
             id: 2,
-            src: resellingcars
+            src: resellingcars,
+            live: "https://reselling-cars.web.app/",
+            client: "https://github.com/sadab275/Reselling-Cars-client-side",
+            server: "https://github.com/sadab275/Reselling-Cars-server-side"
         },
         {
             id: 3,
-            src: skillassesment
+            src: skillassesment,
+            live: "https://inquisitive-zuccutto-a95fba.netlify.app/",
+            client: "https://github.com/sadab275/Quiz-Crackers",
+
         },
         {
             id: 4,
-            src: music
+            src: music,
+            live: "https://zingy-cactus-a2b1e5.netlify.app/",
+            client: "https://github.com/sadab275/Ultra-Active-Club",
+
         },
     ]
 
@@ -38,12 +49,13 @@ const Portfolio = () => {
 
                 <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-8 px-12 sm:px-0'>
                     {
-                        projects.map(({ id, src, live }) => (
+                        projects.map(({ id, src, live, client, server }) => (
                             <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
                                 <img className='rounded-md duration-200 hover:scale-105' src={src} alt="" />
                                 <div className='flex items-center justify-center'>
-                                    <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Live Site</button>
-                                    <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
+                                    <a href={live} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Live Site</a>
+                                    <a href={client} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Client Side Code</a>
+                                    <a href={server} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Server Side Code</a>
                                 </div>
                             </div>
                         ))
